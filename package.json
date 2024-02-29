@@ -16,6 +16,7 @@
   },
   "devDependencies": {
     "@types/react": "^18.2.56",
+    "@types/react-beautiful-dnd": "^13.1.8",
     "@types/react-dom": "^18.2.19",
     "@vitejs/plugin-react-swc": "^3.5.0",
     "autoprefixer": "^10.4.17",
