@@ -1,7 +1,8 @@
+/* eslint-disable react/prop-types */
+// eslint-disable-next-line react/prop-types
 import { Droppable } from "react-beautiful-dnd";
 import TaskBox from "../TaskBox";
 
-// eslint-disable-next-line react/prop-types
 const TaskCol = ({title, tasks, id}) => {
   return (
     <div className="w-80 h-96 bg-slate-300 border border-gray-500 overflow-y-auto">
@@ -13,7 +14,6 @@ const TaskCol = ({title, tasks, id}) => {
             ref={provided.innerRef}
             {...provided.droppableProps}
           >
-            {/* eslint-disable-next-line react/prop-types */}
             {tasks.map((item, index) => (
               <TaskBox key={item.id} index={index} task={item} />
             ))}
