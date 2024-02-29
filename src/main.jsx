@@ -4,6 +4,7 @@ import App from './App.jsx'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
+  // <React.StrictMode></React.StrictMode> یارو گفت ممکنه مشکل ساز شه
   <React.StrictMode>
     <App />
   </React.StrictMode>,
