@@ -1,7 +1,9 @@
+import Board from './components/Board';
+
 const App = () => {
   return (
     <>
-      <div className='bg-red-500'>mamad nobari</div>
+      <Board />
     </>
   );
 };
