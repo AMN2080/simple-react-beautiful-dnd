@@ -1,12 +1,11 @@
-/* eslint-disable react/prop-types */
-// eslint-disable-next-line react/prop-types
+import PropTypes from 'prop-types';
 import { Droppable } from "react-beautiful-dnd";
 import TaskBox from "../TaskBox";
 
 const TaskCol = ({title, tasks, id}) => {
   return (
     <div className="w-80 h-96 bg-slate-300 border border-gray-500 overflow-y-auto">
-      <p className="p-2 bg-blue-300 sticky text-center">{title}</p>
+      <p className="p-2 bg-blue-300 sticky top-0 text-center">{title}</p>
       <Droppable droppableId={String(id)}>
         {(provided, snapshot) => (
           <div
@@ -23,6 +22,12 @@ const TaskCol = ({title, tasks, id}) => {
       </Droppable>
     </div>
   );
+};
+
+TaskCol.propTypes = {
+  title: PropTypes.string.isRequired,
+  tasks: PropTypes.array.isRequired,
+  id: PropTypes.string.isRequired,
 };
 
 export default TaskCol;

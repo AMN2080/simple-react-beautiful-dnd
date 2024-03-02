@@ -77,9 +77,6 @@ const Board = () => {
   const [taskCols, setTaskCols] = useState(taskData.taskCols);
   const tasks = taskData.tasks;
 
-  //پاکش کن آخر
-  // const [test, setTest] = useState()
-
   const handleDragEnd = (result) => {
     const { destination, source, draggableId } = result;
   
@@ -103,8 +100,8 @@ const Board = () => {
   }
 
   const taskPointer = (taskIds) => {
-    return tasks.filter((task) => taskIds.includes(task.id))
-  }
+    return taskIds.map(id => tasks.find(task => task.id === id));
+  }  
 
   return (
     <DragDropContext onDragEnd={handleDragEnd}>
@@ -116,7 +113,8 @@ const Board = () => {
             tasks={taskPointer(col.taskIds)}
             id={String(col.id)}
           />
-        ))}
+        ))
+        }
       </div>
     </DragDropContext>
   );
