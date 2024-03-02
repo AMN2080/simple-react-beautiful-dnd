@@ -5,14 +5,14 @@ const TaskBox = ({ task, index }) => {
   return (
     <Draggable draggableId={String(task.id)} key={task.id} index={index}>
       {(provided) => (
-        <div className='min-h-20 mx-3 p-2 bg-orange-400 hover:bg-orange-300 text-white flex justify-between flex-col space-y-2 rounded-xl cursor-pointer'
+        <div className='min-h-20 mx-3 p-2 bg-slate-500 border hover:border-yellow-400 text-white flex justify-between flex-col space-y-2 rounded-xl cursor-pointer'
           {...provided.draggableProps}
           {...provided.dragHandleProps}
           ref={provided.innerRef}
         >
           <div className="flex justify-start p-1">
             <span className="text-xs">
-              #{task.id}
+              #{task.id + 1}
             </span>
           </div>
           <div className="flex justify-center p-1">
